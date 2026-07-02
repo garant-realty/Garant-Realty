@@ -43,7 +43,7 @@
         .header-container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 15px 30px;
+            padding: 10px 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -55,7 +55,7 @@
 
         .nav-menu {
             display: flex;
-            gap: 30px;
+            gap: 25px;
             list-style: none;
         }
 
@@ -78,7 +78,7 @@
         }
 
         .logo img {
-            max-height: 80px;
+            max-height: 70px;
             width: auto;
             cursor: pointer;
         }
@@ -88,23 +88,24 @@
             display: flex;
             justify-content: flex-end;
             align-items: center;
-            gap: 20px;
+            gap: 15px;
         }
 
         .language-switch {
             display: flex;
-            gap: 10px;
+            gap: 8px;
         }
 
         .lang-btn {
             background: none;
             border: 2px solid var(--primary-color);
-            padding: 5px 15px;
+            padding: 5px 12px;
             cursor: pointer;
             border-radius: 5px;
             font-weight: 600;
             color: var(--primary-color);
             transition: all 0.3s;
+            font-size: 14px;
         }
 
         .lang-btn.active {
@@ -115,7 +116,7 @@
         .cta-phone {
             background: var(--primary-color);
             color: var(--white);
-            padding: 12px 25px;
+            padding: 10px 20px;
             border-radius: 25px;
             text-decoration: none;
             font-weight: 600;
@@ -125,7 +126,7 @@
             transition: background 0.3s;
             cursor: pointer;
             border: none;
-            font-size: 16px;
+            font-size: 15px;
         }
 
         .cta-phone:hover {
@@ -150,7 +151,7 @@
         .mobile-menu {
             display: none;
             position: fixed;
-            top: 110px;
+            top: 90px;
             left: 0;
             right: 0;
             background: var(--white);
@@ -182,8 +183,8 @@
 
         /* Hero Section */
         .hero {
-            margin-top: 110px;
-            background: linear-gradient(135deg, rgba(16,91,122,0.8), rgba(13,74,99,0.9)), 
+            margin-top: 90px;
+            background: linear-gradient(135deg, rgba(16,91,122,0.85), rgba(13,74,99,0.9)), 
                         url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
             min-height: 600px;
             display: flex;
@@ -253,40 +254,51 @@
             max-width: 1400px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(3, 1fr) 400px;
-            gap: 40px;
-            align-items: center;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
         }
 
         .about-column {
             background: var(--white);
-            padding: 30px;
+            padding: 35px 25px;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .about-column:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        }
+
+        .about-column .icon-box {
+            width: 70px;
+            height: 70px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .about-column .icon-box i {
+            font-size: 30px;
+            color: var(--white);
         }
 
         .about-column h3 {
             color: var(--primary-color);
-            font-size: 22px;
+            font-size: 20px;
             margin-bottom: 15px;
+            line-height: 1.4;
         }
 
         .about-column p {
             color: #666;
-            line-height: 1.8;
-        }
-
-        .about-image {
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-        }
-
-        .about-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
+            line-height: 1.6;
+            font-size: 15px;
         }
 
         /* Services */
@@ -486,6 +498,23 @@
             font-weight: 600;
             margin-top: 20px;
             font-size: 18px;
+            text-decoration: none;
+        }
+
+        .map-link:hover {
+            color: var(--accent-color);
+        }
+
+        .address-text {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+            font-size: 18px;
+        }
+
+        .address-text i {
+            color: var(--primary-color);
+            margin-right: 8px;
         }
 
         /* Footer */
@@ -512,7 +541,7 @@
             }
 
             .logo img {
-                max-height: 60px;
+                max-height: 55px;
             }
 
             .header-right {
@@ -529,8 +558,12 @@
                 display: none;
             }
 
+            .cta-phone {
+                padding: 10px 15px;
+            }
+
             .hero {
-                margin-top: 90px;
+                margin-top: 75px;
                 min-height: 500px;
             }
 
@@ -539,11 +572,7 @@
             }
 
             .about-container {
-                grid-template-columns: 1fr;
-            }
-
-            .about-image {
-                order: -1;
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .services-container {
@@ -582,6 +611,14 @@
 
             .map-container iframe {
                 height: 350px;
+            }
+
+            .values-logo img {
+                max-width: 280px;
+            }
+
+            .about-container {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -683,7 +720,7 @@
             </div>
 
             <div class="logo" onclick="scrollToSection('hero')">
-                <img src="logo.png" alt="Garant Realty">
+                <img src="469095045_590934203324936_365654765573452091_n.jpg" alt="Garant Realty">
             </div>
 
             <div class="header-right">
@@ -736,25 +773,40 @@
         <h2 class="section-title" data-ru="О нас" data-hy="Մեր մասին">О нас</h2>
         <div class="about-container">
             <div class="about-column">
-                <h3 data-ru="Опыт и профессионализм" data-hy="Փորձ և պրոֆեսիոնալիզմ">Опыт и профессионализм</h3>
-                <p data-ru="Наша команда состоит из квалифицированных специалистов с многолетним опытом работы на рынке недвижимости Армении." data-hy="Մեր իմը բաղկացած է որակյալ մասնագետներից՝ Հայաստանի անշարժ գույքի շուկայում բազմամյա փորձով:">
-                    Наша команда состоит из квалифицированных специалистов с многолетним опытом работы на рынке недвижимости Армении.
-                </p>
+                <div class="icon-box">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>
+                    <span data-ru="6+ лет на рынке" data-hy="6+ տարի շուկայում">6+ лет на рынке</span><br>
+                    <span data-ru="" data-hy="6+ տարի շուկայում">6+ տարի շուկայում</span>
+                </h3>
             </div>
             <div class="about-column">
-                <h3 data-ru="Индивидуальный подход" data-hy="Անհատական մոտեցում">Индивидуальный подход</h3>
-                <p data-ru="Мы понимаем, что каждый клиент уникален. Поэтому предлагаем персонализированные решения, соответствующие вашим потребностям и бюджету." data-hy="Մենք հասկանում ենք, որ յուրաքանչյուր հաճախորդ յուրահատուկ է: Այդ պատճառով առաջարկում ենք անհատականացված լուծումներ՝ համապատասխան ձեր կարիքներին և բյուջեին:">
-                    Мы понимаем, что каждый клиент уникален. Поэтому предлагаем персонализированные решения, соответствующие вашим потребностям и бюджету.
-                </p>
+                <div class="icon-box">
+                    <i class="fas fa-home"></i>
+                </div>
+                <h3>
+                    <span data-ru="Покупка и продажа недвижимости" data-hy="Անշարժ գույքի առք և վաճառք">Покупка и продажа недвижимости</span><br>
+                    <span data-ru="" data-hy="Անշարժ գույքի առք և վաճառք">Անշարժ գույքի առք և վաճառք</span>
+                </h3>
             </div>
             <div class="about-column">
-                <h3 data-ru="Полное сопровождение" data-hy="Լիարժեք ուղեկցում">Полное сопровождение</h3>
-                <p data-ru="Мы сопровождаем вас на всех этапах сделки — от подбора объекта до оформления документов и получения ключей." data-hy="Մենք ուղեկցում ենք ձեզ գործարքի բոլոր փուլերում՝ օբյեկտի ընտրությունից մինչև փաստաթղթերի ձևակերպումը և բանալիների ստացումը:">
-                    Мы сопровождаем вас на всех этапах сделки — от подбора объекта до оформления документов и получения ключей.
-                </p>
+                <div class="icon-box">
+                    <i class="fas fa-key"></i>
+                </div>
+                <h3>
+                    <span data-ru="Квартиры в посуточную и долгосрочную аренду" data-hy="Օրավարձով և երկարաժամկետ վարձակալությամբ բնակարաններ">Квартиры в посуточную и долгосрочную аренду</span><br>
+                    <span data-ru="" data-hy="Օրավարձով և երկարաժամկետ վարձակալությամբ բնակարաններ">Օրավարձով և երկարաժամկետ վարձակալությամբ բնակարաններ</span>
+                </h3>
             </div>
-            <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="About Us">
+            <div class="about-column">
+                <div class="icon-box">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <h3>
+                    <span data-ru="Бесплатная консультация" data-hy="Անվճար խորհրդատվություն">Бесплатная консультация</span><br>
+                    <span data-ru="" data-hy="Անվճար որհրդատվություն">Անվճար խորհրդատվություն</span>
+                </h3>
             </div>
         </div>
     </section>
@@ -768,8 +820,8 @@
                     <i class="fas fa-home"></i>
                 </div>
                 <h3 data-ru="Покупка недвижимости" data-hy="Անշարժ գույքի գնում">Покупка недвижимости</h3>
-                <p data-ru="Поможем найти и приобрести идеальную недвижимость по лучшей цене. Полный юридический сопровождение сделки." data-hy="Կգնենք գտնել և ձեռք բերել իդեալական անշարժ գույքը լավագույն գնով: Գործարքի լիարժեք իրավաբանական ուղեկցում:">
-                    Поможем найти и приобрести идеальную недвижимость по лучшей цене. Полный юридический сопровождение сделки.
+                <p data-ru="Поможем найти и приобрести идеальную недвижимость по лучшей цене. Полное юридическое сопровождение сделки." data-hy="Կօգնենք գտնել և ձեռք բերել իդեալական անշարժ գույքը լավագույն գնով: Գործարքի լիարեք իրավաբանական ուղեկցում:">
+                    Поможем найти и приобрести идеальную недвижимость по лучшей цене. Полное юридическое сопровождение сделки.
                 </p>
             </div>
             <div class="service-card">
@@ -797,7 +849,7 @@
     <section class="values" id="values">
         <div class="values-container">
             <div class="values-logo">
-                <img src="logo.png" alt="Garant Realty">
+                <img src="469095045_590934203324936_365654765573452091_n.jpg" alt="Garant Realty">
             </div>
             <div class="values-text">
                 <h2 data-ru="Гарантия надежности и доверия в каждой сделке" data-hy="Երաշխավորված հուսալիություն և վստահություն յուրաքանչյուր գործարքում">
@@ -849,14 +901,14 @@
     <section class="location" id="location">
         <h2 class="section-title" data-ru="Наше местоположение" data-hy="Մեր գտնվելու վայրը">Наше местоположение</h2>
         <div class="map-container" onclick="openYandexMap()">
-            <iframe src="https://yandex.ru/map-widget/v1/?ll=44.499853%2C40.222106&z=16&text=Դավթաշեն+4+թաղ.+15+շենք+Երևан" allowfullscreen="true"></iframe>
+            <iframe src="https://yandex.ru/map-widget/v1/?text=Դավթաշեն+4+թաղ.+15+շենք,+Երևան,+Հայաստան&z=17&l=map" allowfullscreen="true"></iframe>
         </div>
-        <a href="https://yandex.ru/maps/?text=Դավթաշեն+4+թաղ.+15+շենք+Երևан" target="_blank" class="map-link">
+        <a href="https://yandex.ru/maps/?text=Դավթաշեն+4+թաղ.+15+շենք,+Երևան,+Հայաստան" target="_blank" class="map-link">
             <i class="fas fa-map-marked-alt"></i>
             <span data-ru="Открыть в Яндекс.Картах" data-hy="Բացել Яндекс.Քարտեզներում">Открыть в Яндекс.Картах</span>
         </a>
-        <p style="text-align: center; margin-top: 20px; color: #666; font-size: 18px;">
-            <i class="fas fa-map-marker-alt" style="color: var(--primary-color);"></i>
+        <p class="address-text">
+            <i class="fas fa-map-marker-alt"></i>
             <span data-ru="Դավթաշեն 4 թաղ․ 15 շենք / Давташен 4 квартал 15 дом, Ереван, Армения" 
                   data-hy="Դավթաշեն 4 թաղ․ 15 շենք, Երևան, Հայաստան">
                 Դավթաշեն 4 թաղ․ 15 շենք / Давташен 4 квартал 15 дом, Ереван, Армения
@@ -953,7 +1005,7 @@
 
         // Open Yandex Map
         function openYandexMap() {
-            window.open('https://yandex.ru/maps/?text=Դավթաշեն+4+թաղ.+15+շենք+Երևан', '_blank');
+            window.open('https://yandex.ru/maps/?text=Դավթաշեն+4+թաղ.+15+շենք,+Երևան,+Հայաստան', '_blank');
         }
 
         // Header scroll effect
